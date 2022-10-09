@@ -1,0 +1,97 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org" lang="en">
+<body>
+<div id="navigation" th:fragment="navbar">
+    <!-- Header Start -->
+    <header id="dc-header" class="dc-header dc-haslayout dc-header-dashboard">
+        <div class="dc-navigationarea">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <strong class="dc-logo"><a href="dashboard-insights.html"><img src="back/images/eclogo.png" alt="company logo here"></a></strong>
+                        <div class="dc-rightarea">
+                            <nav id="dc-nav" class="dc-nav navbar-expand-lg">
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                    <i class="lnr lnr-menu"></i>
+                                </button>
+                                <div class="collapse navbar-collapse dc-navigation" id="navbarNav">
+                                    <ul class="navbar-nav nav-Js">
+
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="dc-userlogedin">
+                                <div class="dc-username">
+                                    <h4><span sec:authentication="name"> </span></h4>
+                                    <span th:each="authority : ${#authentication.getAuthorities()}"
+                                       th:if="${authority.getAuthority().startsWith('ROLE_')}"
+                                       th:text="${authority.getAuthority().replaceFirst('ROLE_', '')}">
+                                    </span>
+                                   <!-- <span sec:authentication="principal.authorities"></span>-->
+
+                                    <span hidden id="userId" sec:authentication="principal.userId" />
+
+                                </div>
+                                <nav class="dc-usernav">
+                                    <ul>
+                                        <li>
+                                            <a th:href = "@{/dashboard}">
+                                                <i class="ti-dashboard"></i><span>DashBoard</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a th:href = "@{/appointments}">
+                                                <i class="ti-align-justify"></i><span>Appointments</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a th:href = "@{/doctors}">
+                                                <i class="ti-user"></i><span>Doctor</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a th:href = "@{/patients}">
+                                                <i class="ti-user"></i><span>Patient</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a th:href = "@{/centers}">
+                                                <i class="ti-user"></i><span>Channel Center</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a th:href = "@{/articles}">
+                                                <i class="ti-bookmark"></i><span>Manage Articles</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a th:href = "@{/services}">
+                                                <i class="ti-shopping-cart"></i><span>Manage Services</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a th:href = "@{/settings}">
+                                                <i class="ti-settings"></i><span>Account Settings</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a th:href = "@{/logout}">
+                                                <i class="ti-shift-right"></i><span>Logout</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--Header End-->
+
+</div>
+
+</body>
+
+</html>

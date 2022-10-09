@@ -1,0 +1,234 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org" lang="en"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{fragments/front/main_layout}">
+<body class="dc-home">
+<div  layout:fragment="content">
+    <!--**********************************
+                Content body start
+            ***********************************-->
+    <div class="content-body">
+        <!-- breadcrumbarea start -->
+        <div class="dc-breadcrumbarea">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <ol class="dc-breadcrumb">
+                            <li><a href="index.html">Home</a></li>
+                            <li>Registration</li>
+                            <h4><span sec:authentication="name"> </span></h4>
+                            <span hidden id="userId" sec:authentication="principal.userId" />
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- breadcrumbarea End -->
+        <main id="dc-main" class="dc-main dc-haslayout dc-innerbgcolor">
+            <div class="dc-haslayout dc-main-section">
+                <!-- User Listing Start-->
+                <div class="container">
+                    <div class="row">
+                        <div id="dc-twocolumns" class="dc-twocolumns dc-haslayout">
+                            <div class="col-xs-12 col-sm-12 col-md-9 col-lg-10 col-xl-11 float-left">
+                                <div class="dc-searchresult-holder">
+                                    <div class="dc-searchresult-grid">
+                                        <div class="row" id="docPost">
+                                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                <table class="table table-striped" id="searchTable">
+                                                    <thead  class="thead-dark">
+                                                    <tr>
+                                                        <th class="hide_me"></th>
+                                                        <th>Doctor Name</th>
+                                                        <th>Speciality</th>
+                                                        <th>Working Channel Center</th>
+                                                        <th>Address</th>
+                                                        <th>Channel Center Contact Number</th>
+                                                        <th></th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody id="searchTBody">
+
+                                                    </tbody>
+
+                                                </table>
+                                             </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+        <!-- Book Appointment Popup Start-->
+        <div class="modal fade dc-appointmentpopup" tabindex="-1" role="dialog" id="appointment">
+            <div class="modal-dialog" role="document">
+                <div class="dc-modalcontent modal-content">
+                    <section id="sec1" class="sec1">
+                        <div class="dc-popuptitle">
+                            <h3>Book Appointment</h3>
+                            <a href="javascript%3bvoid(0)%3b.html" class="dc-closebtn close dc-close"><i class="ti-close" data-dismiss="modal" aria-label="Close"></i></a>
+                        </div>
+                        <div id="dcModalBody" class="modal-body dc-modal-content-one dc-haslayout">
+                            <ul class="dc-joinsteps">
+                                <li class="dc-active"><a href="javascrip:void(0);">01</a></li>
+                                <li><a href="javascrip:void(0);">02</a></li>
+                                <!--<li><a href="javascrip:void(0);">03</a></li>-->
+                                <!--<li><a href="javascrip:void(0);">04</a></li>-->
+                            </ul>
+                            <div id="dcModalBody1" class="dc-visitingdoctor">
+                                <div class="dc-title">
+                                    <span>Who is Visiting To Doctor? :</span>
+                                    <div class="dc-tabbtns">
+                                        <a href="javascript:void(0);" class="dc-tabbtns-active">Myself</a>
+                                        <a href="javascript:void(0);" class="dc-popupdropdown">Someone Else</a>
+                                    </div>
+                                </div>
+                                <!--<form class="dc-formtheme dc-docinfoform">
+                                    <fieldset>
+                                        <div class="form-group form-group-half">
+                                            <input type="text" name="Last Name" class="form-control" placeholder="Last Name">
+                                        </div>
+                                        <div class="form-group form-group-half">
+										<span class="dc-select">
+											<select data-placeholder="Relation With You?*" name="Reason">
+												<option value="Reason">Relation With You?*</option>
+												<option value="Reason">Brother</option>
+												<option value="Reason">Wife</option>
+												<option value="Reason">mother</option>
+												<option value="Reason">sister</option>
+											</select>
+										</span>
+                                        </div>
+                                    </fieldset>
+                                </form>-->
+                                <form class="dc-formtheme dc-vistingdocinfo">
+                                    <fieldset>
+                                        <div class="form-group form-group-half">
+                                            <input type="text" name="Last Name" class="form-control" placeholder="Doctor Name">
+                                        </div>
+                                        <div class="form-group form-group-half">
+                                            <input type="text" name="Last Name" class="form-control" placeholder="Channel Center">
+                                        </div>
+                                        <div class="form-group">
+                                            <textarea class="form-control" id="comment" placeholder="Comments:"></textarea>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                                <div class="dc-appointment-holder">
+                                    <div class="dc-title">
+                                        <h4>Select Best Time For Appointment</h4>
+                                        <span class="dc-checkbox">
+										<input id="appointtime" type="checkbox" name="appointtime" value="appointtime">
+										<label for="appointtime"><span>Appoint First Available Time</span></label>
+									</span>
+                                    </div>
+                                    <div class="dc-appointment-content">
+                                        <!--<div class="dc-appointment-calendar">
+                                            <div id="dc-calendar" class="dc-calendar"></div>
+                                        </div>
+                                        <div class="dc-timeslots">
+
+                                        </div>-->
+                                        <div class="table-responsive">
+                                        <table class="table table-striped" id="appTable">
+                                            <thead  class="thead-dark">
+                                            <tr>
+                                                <th></th>
+                                                <th width="200px">Appointment_Date</th>
+                                                <th width="100px">Start_Time</th>
+                                                <th width="100px">End_Time</th>
+                                                <th width="100px">Action</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody id="appTBody">
+
+                                            </tbody>
+
+                                        </table>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="dcModalBody2" class="modal-body dc-modal-content-two dc-haslayout">
+                            <div class="dc-visitingdoctor dc-popup-doc">
+                                <ul class="dc-joinsteps">
+                                    <li class="dc-done-next"><a href="javascrip:void(0);"><i class="fa fa-check"></i></a></li>
+                                    <li class="dc-active"><a href="javascrip:void(0);">02</a></li>
+                                    <!--<li><a href="javascrip:void(0);">03</a></li>
+                                    <li><a href="javascrip:void(0);">04</a></li>-->
+                                </ul>
+                                <div class="dc-visit">
+                                    <span>Verify Is That You?</span>
+                                </div>
+                                <form>
+                                    <div class="form-row dc-popup-row">
+                                        <div class="form-group col-6">
+                                            <input type="text" class="form-control" placeholder="User Name">
+                                        </div>
+                                        <div class="form-group col-6">
+                                            <input type="password" class="form-control" placeholder="Password*">
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="dc-title dc-popup-title pl-0">
+								<span class="dc-checkbox float-none">
+									<input id="appointnexttime" type="checkbox" name="appointtime" value="appointtime">
+									<label for="appointnexttime"><span>Trust this computer for next time</span></label>
+								</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!--<div id="dcModalBody3" class="modal-body dc-modal-content-three dc-haslayout">
+                            <ul class="dc-joinsteps">
+                                <li class="dc-done-next"><a href="javascrip:void(0);"><i class="fa fa-check"></i></a></li>
+                                <li class="dc-done-next"><a href="javascrip:void(0);"><i class="fa fa-check"></i></a></li>
+                                <li class="dc-active"><a href="javascrip:void(0);">03</a></li>
+                                <li><a href="javascrip:void(0);">04</a></li>
+                            </ul>
+                            <h5>Enter Authentication Code</h5>
+                            <p>We�ve sent verification code on your email at<a href="#"> info@domainurl.com</a></p>
+                            <input type="text" placeholder="Authentication Code Here">
+                        </div>-->
+                        <!--<div id="dcModalBody4" class="modal-body dc-modal-content-four dc-haslayout">
+                            <ul class="dc-joinsteps">
+                                <li class="dc-done-next"><a href="javascrip:void(0);"><i class="fa fa-check"></i></a></li>
+                                <li class="dc-done-next"><a href="javascrip:void(0);"><i class="fa fa-check"></i></a></li>
+                                <li class="dc-done-next"><a href="javascrip:void(0);"><i class="fa fa-check"></i></a></li>
+                                <li class="dc-done-next"><a href="javascrip:void(0);"><i class="fa fa-check"></i></a></li>
+                            </ul>
+                            <div class="dc-modal-body4-title">
+                                <h6>Congratulations!</h6>
+                                <h4>Your Appointment Is Confirmed</h4>
+                            </div>
+                            <div class="dc-modal-body4-description">
+                                <p>Consectetur adipisicing elit sed done <a href="#">@ 02:00 pm</a> tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco <a href="#">info@domainurl.com</a>  nisi ut aliquip.</p>
+                            </div>
+                        </div>-->
+                        <div class="modal-footer dc-modal-footer">
+                            <a href="javascript:void(0);" id="dcbtn" class="btn dc-btn btn-primary" data-toggle="modal" data-target="#appointment2">Continue</a>
+                            <!--<div sec:authorize="!isFullyAuthenticated()">
+                                <a href="javascript:void(0);" id="dcbtn" class="btn dc-btn btn-primary" data-toggle="modal" data-target="#appointment2">Login</a>
+                            </div>-->
+                            <a href="javascript:void(0);" id="dcbtn2" class="btn dc-btn btn-primary" data-toggle="modal" data-target="#appointment2">Done</a>
+                            <!--<a href="javascript:void(0);" id="dcbtn3" class="btn dc-btn btn-primary" data-toggle="modal" data-target="#appointment2">Verify Now</a>
+                            <a href="javascript:void(0);" id="dcbtn4" class="btn dc-btn btn-primary mx-auto" data-toggle="modal" data-target="#appointment2">Looks Good</a>-->
+                            <div class="dc-footer-terms">
+                                <p class="mb-0">By Continuing, you agree to<a href="javascript:void(0);"> Terms and Conditions</a></p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script th:src="@{/front/js/vendor/jquery-3.3.1.js}"></script>
+    <script th:src="@{/front/js/project/searchDetails.js}"></script>
+</div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org" lang="en"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{fragments/back/main_layout}">
+<body class="dc-userlogin">
+<div  layout:fragment="content">
+    <div class="content-body">
+        <main id="dc-main" class="dc-main dc-haslayout">
+            <section class="dc-haslayout">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <div class="dc-haslayout dc-dbsectionspace dc-dbsectionspacetest">
+                            <div class="dc-dashboardbox">
+                                <div class="dc-dashboardboxtitle">
+                                    <h2>Appointment Locations</h2>
+                                </div>
+                                <div class="dc-dashboardboxcontent dc-clinicloc-holder">
+                                    <div class="dc-tabscontenttitle">
+                                        <h3>Avaiable Locations</h3>
+                                    </div>
+                                    <div class="dc-content-holder">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <section class="dc-haslayout">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <div class="dc-haslayout dc-dbsectionspace dc-dbsectionspacetest">
+                            <div class="dc-dashboardbox">
+                                <div class="dc-dashboardboxtitle">
+                                    <h2>Patients</h2>
+                                </div>
+                                <div class="dc-dashboardboxcontent dc-clinicloc-holder">
+                                    <div class="dc-tabscontenttitle">
+                                        <h3>Available Patients</h3>
+                                    </div>
+                                    <div class="dc-content-holder">
+                                    <!-- <div th:if="${ not#lists.isEmpty(center)}"> -->
+										<table class="table" id="patientTable">
+										  <thead class="thead-dark">
+										    <tr>
+										      	<th>Patient Name</th>
+										        <th>NIC</th>
+										        <th>Contact No.</th>
+										        <th>Email</th>
+										        <th>Address</th>
+										        <th>Options</th>
+										   	</tr>
+										  </thead>
+										  <tbody id="patientTbody">
+										    <!-- <tr  th:each="patient : ${patient}">
+												<td th:text="${patient.firstName}">Patient Name</td>
+												<td th:text="${patient.address}">Patient Address</td>
+												<td th:text="${patient.nic}">NIC</td>
+												<td th:text="${patient.contactNo}">Contact No.</td>
+											</tr>  -->
+										  </tbody>
+										</table>
+										<!-- </div> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+
+    </div>
+    <script th:src="@{/back/js/vendor/jquery-3.3.1.js}"></script>
+    <script th:src="@{/back/js/project/patient.js}"></script>
+</div>
+</body>
+</html>

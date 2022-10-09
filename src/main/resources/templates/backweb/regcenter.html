@@ -1,0 +1,77 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org" lang="en"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    layout:decorate="~{fragments/back/main_layout}">
+<body class="dc-userlogin">
+<div  layout:fragment="content">
+    <div class="content-body"> 
+        <main id="dc-main" class="dc-main dc-haslayout dc-innerbgcolor">
+            <!--Create Channel Center Form Start-->
+			<div class="dc-haslayout dc-main-section">
+				<div class="container">
+					<div class="row justify-content-md-center">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 push-lg-2">
+							<div class="dc-registerformhold">
+								<div class="dc-registerformmain">
+								<div class="dc-registerhead">
+									<div class="dc-title">
+										<h3>Register For Center</h3>
+									</div>
+									</div>
+									<br><br>
+									<div class="form-group">
+											<span class="dc-select">
+												<select class="chosen-select" id="cent" data-placeholder="Channel Centers" name="Channel Centers">
+														<option value="0">Select Channel Center</option>
+												</select>
+											</span>
+									</div>
+									<div class="form-group">
+										<div class="dc-select">
+											<select class="chosen-select" id="channelDay">
+												<option value="0">Select Day</option>
+												<option value="Show">Monday</option>
+												<option value="Show">Tuesday</option>
+												<option value="Show">Wednesday</option>
+												<option value="Show">Thursday</option>
+												<option value="Show">Friday</option>
+												<option value="Show">Saturday</option>
+												<option value="Show">Sunday</option>
+											</select>
+										</div>
+									</div>
+									<input id="doctorId" type="hidden" name="" >
+									<input id="centerId" type="hidden" name="" >
+									<div class="form-group form-group-half">
+										<label>&nbsp;&nbsp;Start Time</label>
+									</div>
+									<div class="form-group form-group-half">
+										<label>&nbsp;&nbsp;End Time</label>
+									</div>
+									<div class="form-group form-group-half">
+										<input type="time" id="time1" name="time1" class="form-control" placeholder="Time">
+									</div>
+									<div class="form-group form-group-half">
+										<input type="time" id="time2" name="time2" class="form-control" placeholder="Time">
+									</div>
+
+									<div class="form-group">
+										<button type="button" class="dc-btn" onclick="saveCenter()"> Create</button>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+            
+        </main>
+
+    </div>
+    <script th:src="@{/back/js/vendor/jquery-3.3.1.js}"></script>
+    <script th:src="@{/back/js/project/registercenter.js}"></script>
+</div>
+</body>
+</html>

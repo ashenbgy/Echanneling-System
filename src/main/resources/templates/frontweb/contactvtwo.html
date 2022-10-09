@@ -1,0 +1,127 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org" lang="en"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorate="~{fragments/front/main_layout}">
+<body class="dc-home dc-homevtwo" onload="initMap();">
+<div  layout:fragment="content">
+	<!--**********************************
+                Content body start
+            ***********************************-->
+	<div class="content-body">
+
+		<!-- breadcrumbarea start -->
+		<div class="dc-breadcrumbarea">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<ol class="dc-breadcrumb">
+							<li><a href="index.html">Home</a></li>
+							<li>Contact Us</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- breadcrumbarea End -->
+		<!-- Main Start -->
+		<main id="dc-main" class="dc-main dc-haslayout">
+			<!-- Contact Welcome Start -->
+
+			<section class="dc-haslayout dc-main-section">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6 align-self-center">
+							<div class="dc-welcomecontent">
+								<figure class="dc-welcomeimg"><img src="front/images/Contact-v2logo_06.png" alt="img description"></figure>
+								<div class="dc-title">
+									<h3><span>Always Get In Touch</span>Our Contact Details</h3>
+								</div>
+								<div class="dc-description dc-paddingr">
+									<p>Largest E Channeling network in Sri Lanka</p>
+								</div>
+								<div class="dc-contactinfo dc-floatclear">
+									<ul>
+										<li><span><span class="lnr lnr-location"></span>Lotus Street, Anuradhapura 50240</span></li>
+										<li><span class="lnr lnr-envelope"></span>echannel@gmail.com</li>
+										<li><span class="lnr lnr-phone-handset"></span>071 2147148</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 dc-map">
+							<div id="map" class="dc-thememap dc-thememapvtwo"></div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- Contact Welcome End -->
+			<!-- Say Hello Start -->
+			<section class="dc-haslayout dc-main-section">
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-12 col-sm-12 col-md-12 col-lg-8">
+							<div class="dc-sectionhead dc-text-center dc-pnone">
+								<div class="dc-sectiontitle">
+									<h2><span>Get in Touch with Us</span>Say <em>Hello To Us</em></h2>
+								</div>
+								<!--<div class="dc-description">
+									<p>Lorem ipsum dolor amet consectetur adipisicing eliteiuim sete eiusmod tempor incididunt ut labore etnalom dolore magna aliqua udiminimate veniam quis norud.</p>
+								</div>-->
+							</div>
+							<div class="dc-form dc-floatclear dc-form-first">
+								<form>
+									<div class="form-row">
+										<div class="form-group col-12 col-sm-6">
+											<input type="text" class="form-control" placeholder="Your Name*">
+										</div>
+										<div class="form-group col-12 col-sm-6">
+											<input type="email" class="form-control" placeholder="Your Email*">
+										</div>
+									</div>
+									<div class="form-group">
+										<textarea name="textarea" placeholder="Type Your Query*"></textarea>
+									</div>
+									<button class="btn dc-btns btn-block dc-btnactive" type="button">Send Now</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- Emerging Clients End -->
+		</main>
+		<!-- Main End -->
+
+	</div>
+
+<script th:src="@{/front/js/vendor/jquery-3.3.1.js}"></script>
+<script th:src="@{/front/js/project/user.js}"></script>
+	<script type="text/javascript">
+		var map;
+
+		function initMap() {
+			var latitude = 8.1540; // YOUR LATITUDE VALUE
+			var longitude = 80.3046; // YOUR LONGITUDE VALUE
+
+			var myLatLng = {lat: latitude, lng: longitude};
+
+			map = new google.maps.Map(document.getElementById('map'), {
+			  center: myLatLng,
+			  zoom: 14
+			});
+
+			var marker = new google.maps.Marker({
+			  position: myLatLng,
+			  map: map,
+			  //title: 'E Channel'
+
+			  // setting latitude & longitude as title of the marker
+			  // title is shown when you hover over the marker
+			  title: latitude + ', ' + longitude
+			});
+		}
+		</script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCA9WxUzanm0I39BNWrrMouIkURepq_Oxc&libraries=places"></script>
+</div>
+</body>
+</html>

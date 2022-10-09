@@ -1,0 +1,412 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org" lang="en"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorate="~{fragments/front/main_layout}">
+<body class="dc-home dc-homevtwo">
+<div  layout:fragment="content">
+	<!--**********************************
+                Content body start
+            ***********************************-->
+	<div class="content-body">
+		<!-- Home Slider Start -->
+		<div class="dc-homeslidervtwo dc-haslayout">
+			<div id="dc-bannervtwo" class="dc-bannervtwo owl-carousel">
+				<div class="item">
+					<figure class="dc-silderimg"><img src="front/images/slider/img-01.jpg" alt="img description"></figure>
+				</div>
+				<div class="item">
+					<figure class="dc-silderimg"><img src="front/images/slider/img-02.jpg" alt="img description"></figure>
+				</div>
+				<div class="item">
+					<figure class="dc-silderimg"><img src="front/images/slider/img-03.jpg" alt="img description"></figure>
+				</div>
+			</div>
+			<div class="dc-bannervtwocontent">
+				<div class="container">
+					<div class="row">
+						<div class="col-12 col-sm-12 col-md-12 col-lg-6">
+							<div class="dc-medicalfacility">
+								<div class="dc-title">
+									<h2><em>Emergency?</em><span> Find Nearest </span>Medical Facility</h2>
+								</div>
+								<form class="dc-formtheme dc-medicalform">
+									<fieldset>
+										<div class="form-group">
+											<span class="dc-select">
+												<select class="chosen-select locations" data-placeholder="Specialization" id ="specialization" name="locations">
+															<option value="0">Any Specialization</option>
+															<option>Acupuncture</option>
+															<option>Allergy And Immunology</option>
+															<option>Allergy Specialist </option>
+															<option>Anaesthetist and Intensivist</option>
+															<option>Andrology And Male Fertility</option>
+															<option>Anesthetist Assistant</option>
+															<option>Anomaly Scan</option>
+															<option>Applied Psychologist</option>
+															<option>Arthritis</option>
+															<option>Audiologist</option>
+															<option>Audiometrist</option>
+															<option>Ayurvedic And Alternative Medicine</option>
+															<option>Ayurvedic Cardiologist</option>
+															<option>Ayurvedic General Slimming & Beauty</option>
+															<option>Ayurvedic Physician</option>
+															<option>Ayurvedic Physician (Boils & Wounds Special)</option>
+															<option>Ayurvedic Skin Specialist</option>
+															<option>Back Pain Treatment </option>
+															<option>Bacteriologist</option>
+															<option>Behaviour Therapist</option>
+															<option>Breast and Oncological Surgeon</option>
+															<option>Breast Cancer Surgeon</option>
+															<option>Breast Feeding</option>
+															<option>Breastfeeding and Counselling</option>
+															<option>Canada Visa Medical</option>
+															<option>Cancer Surgeon</option>
+															<option>Cardiac Electrophysiologist</option>
+															<option>Cardiographer</option>
+															<option>Cardiologist </option>
+															<option>Cardiologist And Cardiac Electrophysiologist</option>
+															<option>Cardiologist Echo</option>
+															<option>Cardiothoracic Surgeon</option>
+															<option>Chemical Pathology</option>
+															<option>Chest Physician</option>
+															<option>Chest Specialist</option>
+															<option>Child and Adolescent Psychiatric</option>
+															<option>Child and Adolescent Psychologist</option>
+															<option>Child And Adolescent Psychology  Clinic</option>
+															<option>Child Psychiatrist</option>
+															<option>Child Psychologist</option>
+															<option>Children Dentist</option>
+															<option>Children's Respiratory Centre</option>
+															<option>Chiropractor</option>
+															<option>Clinical  Geneticist</option>
+															<option>Clinical  Interventional Cardiologist</option>
+															<option>Clinical Audiologist</option>
+															<option>Clinical Embryologist</option>
+															<option>Clinical Haematologist</option>
+															<option>Clinical Health Psychologist</option>
+															<option>Clinical Hypnotist</option>
+															<option>Clinical Immunologist</option>
+															<option>Clinical Microbiologist</option>
+															<option>Clinical Neurologist</option>
+															<option>Clinical Neurophysiologist</option>
+															<option>Clinical Nutritionist</option>
+															<option>Clinical Oncologist</option>
+															<option>Clinical Physiologist</option>
+															<option>Clinical Psychologist</option>
+															<option>Co-Ordinating Dr (Sleep Medicine)</option>
+															<option>Colorectal Surgeon</option>
+															<option>Community Child Health( Development Assessment )</option>
+															<option>Community Medicine</option>
+															<option>Community Medicine Physician</option>
+															<option>Consultant Cardiologist</option>
+															<option>Consultant Cardiothoracic Surgeon</option>
+															<option>Consultant Dental Surgeon</option>
+															<option>Consultant Dental Surgeon In Paediatric Dentistry</option>
+															<option>Consultant Dermatologist</option>
+															<option>Consultant In Fertility</option>
+															<option>Consultant In Reproductive Medicine</option>
+															<option>Consultant Judicial Medicine</option>
+															<option>Consultant Physician</option>
+															<option>Cosmetic Care Clinic And Cosmetic</option>
+															<option>Cosmetic Care Clinic And Cosmetic Physician</option>
+															<option>Counseling Psychologist</option>
+															<option >Counselling</option>
+															<option>Counselor</option>
+															<option>Cupping Therapist</option>
+															<option>Dental And Maxillo - Facial Surgeon</option>
+															<option>Dental Surgeon</option>
+															<option>Dentist</option>
+															<option>Dermatologist</option>
+															<option>Diabetic Specialist</option>
+															<option>Ear, Nose and Throat Surgeon</option>
+															<option>ECHO Scan</option>
+															<option>Educational Therapist</option>
+															<option>EEG</option>
+															<option>EEG Technician</option>
+															<option>Elderly Care</option>
+															<option>Electroencephalography Specialist</option>
+															<option>Embryologist</option>
+															<option>EMDR Therapist</option>
+															<option>Endocrinologist</option>
+															<option>ENT - Head And Neck Surgeon</option>
+															<option>ENT Surgeon</option>
+															<option>Eye Surgeon</option>
+															<option>Family And General Counsellor</option>
+															<option>Family Physician</option>
+															<option>Food & Nutrition</option>
+															<option>Forensic Psychiatrist</option>
+															<option>Gastroenterological And Bariatric Surgeon</option>
+															<option>General</option>
+															<option>Gynaecologist (VOG)</option>
+															<option>Gynecologist and Consultant in Fertility</option>
+															<option>Haemato-oncologist</option>
+															<option>Haematologist</option>
+															<option>Hair Clinic</option>
+															<option>Hernia Centre</option>
+															<option>Histopathologist</option>
+															<option>HOLTER MONITORING</option>
+															<option>Homeopathy</option>
+															<option>Human Nutritionist</option>
+															<option>Imago Therapist</option>
+															<option>Kidney Dialysis</option>
+															<option>Neuro Physician</option>
+															<option>Neuro Physiotherapy</option>
+															<option>Neuro Surgeon</option>
+															<option>Occupational Therapist</option>
+															<option>Oral surgeon</option>
+															<option>Orthopedics (Traditional Medicine)</option>
+															<option>Paediatric Dentist</option>
+															<option>Paediatric Dermatologist</option>
+															<option>Paediatric Eye Surgeon</option>
+															<option>Physician</option>
+															<option>Physiotherapist</option>
+															<option>Plastic Surgeon</option>
+															<option>Radiologist</option>
+															<option>Reproductive Endocrinologist</option>
+															<option>Sexual Health</option>
+															<option>Skin Care And Cosmetic Centre - Plastic Surgeon</option>
+															<option>Specialist Physiotherapist</option>
+															<option>Urologist</option>
+															<option>UV Therapy</option>
+															<option>Wound Consultation</option>
+														</select>
+											</span>
+										</div>
+										<div class="form-group">
+											<span class="dc-select">
+												<select class="chosen-select docItems" id="docItems" data-placeholder="Doctors" name="doctors">
+														<option value="0">Select Doctor</option>
+												</select>
+											</span>
+										</div>
+										<div class="form-group">
+											<span class="dc-select">
+												<select class="chosen-select" id="cent" data-placeholder="Channel Centers" name="Channel Centers">
+														<option value="0">Select Channel Center</option>
+												</select>
+											</span>
+										</div>
+										<div class="form-group dc-btnarea">
+											<button onclick="search()" class="dc-btn">search Now</button>
+										</div>
+									</fieldset>
+								</form>
+							</div>
+						</div>
+						<div class="d-none col-md-6 d-lg-block">
+							<figure class="dc-slidercontentimg">
+								<img src="front/images/slider/img-05.png" alt="img desciption">
+							</figure>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Home Slider End -->
+		<!-- Main Start -->
+		<main id="dc-main" class="dc-main dc-haslayout">
+			<!-- Search Section Start -->
+			<section class="dc-searchholder dc-haslayout">
+				<div class="dc-haslayout">
+					<div class="container-fluid">
+						<div class="row">
+							<div id="dc-doctorslider" class="dc-doctorslider owl-carousel">
+								<div class="item dc-doctordetails-holder dc-titlecolor1">
+									<span class="dc-slidercounter">01.</span>
+									<h3><span>Top Rated</span> Doctors</h3>
+									<a href="javascript:void(0);" class="dc-btn">Show All Doctors</a>
+								</div>
+								<div class="item dc-doctordetails-holder dc-titlecolor2">
+									<span class="dc-slidercounter">02.</span>
+									<h3><span>Fast Appointment With</span> Nearest Channel Centers</h3>
+									<a href="javascript:void(0);" class="dc-btn">Show All Centers</a>
+								</div>
+								<div class="item dc-doctordetails-holder dc-titlecolor3">
+									<span class="dc-slidercounter">03.</span>
+									<h3><span>Articles From Top</span> Channel Centers &amp; Doctors</h3>
+									<a href="javascript:void(0);" class="dc-btn">Show All Articles</a>
+								</div>
+								<div class="item dc-doctordetails-holder dc-titlecolor4">
+									<span class="dc-slidercounter">04.</span>
+									<h3><span>Our 24/7 Active</span> Help Support</h3>
+									<a href="javascript:void(0);" class="dc-btn">Show All Centers</a>
+								</div>
+								<div class="item dc-doctordetails-holder dc-titlecolor5">
+									<span class="dc-slidercounter">05.</span>
+									<h3><span>About</span> E Channeling</h3>
+									<a href="javascript:void(0);" class="dc-btn">About us</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- Search Section End -->
+			<!-- Works Section Start -->
+			<section class="dc-haslayout">
+				<div class="dc-haslayout dc-bgcolor dc-main-section dc-workholder">
+					<div class="container">
+						<div class="row justify-content-center align-self-center">
+							<div class="col-xs-12 col-sm-12 col-md-8 push-md-2 col-lg-8 push-lg-2">
+								<div class="dc-sectionhead dc-text-center">
+									<div class="dc-sectiontitle">
+										<h2><span>We Made It Simple</span>How It <em>Works?</em></h2>
+									</div>
+									<div class="dc-description">
+										<!-- <p>Lorem ipsum dolor amet consectetur adipisicing eliteiuim sete eiusmod tempor incididunt ut labore etnalom dolore magna aliqua udiminimate veniam quis norud.</p> -->
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="dc-haslayout dc-main-section dc-workdetails-holder">
+					<div class="container">
+						<div class="row">
+							<div class="col-12 col-sm-6 col-md-4 col-lg-4">
+								<div class="dc-workdetails">
+									<div class="dc-workdetail">
+										<figure>
+											<img src="front/images/work-icon/img-01.png" alt="img description">
+										</figure>
+									</div>
+									<div class="dc-title">
+										<span>Search Best Online</span>
+										<h3><a href="javascript:void(0);">Professional</a></h3>
+									</div>
+								</div>
+							</div>
+							<div class="col-12 col-sm-6 col-md-4 col-lg-4">
+								<div class="dc-workdetails dc-workdetails-border">
+									<div class="dc-workdetail">
+										<figure>
+											<img src="front/images/work-icon/img-02.png" alt="img description">
+										</figure>
+									</div>
+									<div class="dc-title">
+										<span>Get Instant</span>
+										<h3><a href="javascript:void(0);">Appointment</a></h3>
+									</div>
+								</div>
+							</div>
+							<div class="col-12 col-sm-6 col-md-4 col-lg-4">
+								<div class="dc-workdetails dc-workdetails-bordertwo">
+									<div class="dc-workdetail">
+										<figure>
+											<img src="front/images/work-icon/img-03.png" alt="img description">
+										</figure>
+									</div>
+									<div class="dc-title">
+										<span>Leave Your</span>
+										<h3><a href="javascript:void(0);">Feedback</a></h3>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- Works Section End -->
+			<!-- Latest Articles Start -->
+			<section class="dc-haslayout dc-main-section">
+				<div class="container">
+					<div class="row justify-content-center align-self-center">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 push-lg-2">
+							<div class="dc-sectionhead dc-text-center">
+								<div class="dc-sectiontitle">
+									<h2><span>Read Professional Articles</span>Latest <em>Articles</em></h2>
+								</div>
+								<!-- <div class="dc-description">
+									<p>Lorem ipsum dolor amet consectetur adipisicing eliteiuim sete eiusmod tempor incididunt ut labore etnalom dolore magna aliqua udiminimate veniam quis norud.</p>
+								</div> -->
+							</div>
+						</div>
+						<div class="dc-articlesholder">
+							<div class="col-12 col-sm-12 col-md-6 col-lg-4 float-left">
+								<div class="dc-article">
+									<figure class="dc-articleimg">
+										<img src="front/images/articles/img-01.jpg" alt="img description">
+										<figcaption>
+											<div class="dc-articlesdocinfo">
+												<img src="front/images/articles/user/img-01.jpg" alt="img description">
+												<span>Lincoln Claggett</span>
+											</div>
+										</figcaption>
+									</figure>
+									<div class="dc-articlecontent">
+										<div class="dc-title">
+											<a href="javascript:void(0);" class="dc-articleby">Business</a>
+											<h3><a href="javascript:void(0);">Best Way to Stay Healthy and Boost Your Metabolism</a></h3>
+											<span class="dc-datetime"><i class="ti-calendar"></i> Jun 27, 2019</span>
+										</div>
+										<ul class="dc-moreoptions">
+											<li><a href="javascript:void(0);"><i class="ti-heart"></i> 12,032</a></li>
+											<li><a href="javascript:void(0);"><i class="ti-eye"></i> 1,26,558</a></li>
+											<li><a href="javascript:void(0);"><i class="ti-share"></i> Share</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="col-12 col-sm-12 col-md-6 col-lg-4 float-left">
+								<div class="dc-article">
+									<figure class="dc-articleimg">
+										<img src="front/images/articles/img-02.jpg" alt="img description">
+										<figcaption>
+											<div class="dc-articlesdocinfo">
+												<img src="front/images/articles/user/img-02.jpg" alt="img description">
+												<span>Lincoln Claggett</span>
+											</div>
+										</figcaption>
+									</figure>
+									<div class="dc-articlecontent">
+										<div class="dc-title">
+											<a href="javascript:void(0);" class="dc-articleby">Lifestyle</a>
+											<h3><a href="javascript:void(0);">10 Tips, We Challenge You Won’t Get Tired Easily</a></h3>
+											<span class="dc-datetime"><i class="ti-calendar"></i> Jun 27, 2019</span>
+										</div>
+										<ul class="dc-moreoptions">
+											<li><a href="javascript:void(0);"><i class="ti-heart"></i> 12,032</a></li>
+											<li><a href="javascript:void(0);"><i class="ti-eye"></i> 1,26,558</a></li>
+											<li><a href="javascript:void(0);"><i class="ti-share"></i> Share</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="col-12 col-sm-12 col-md-6 col-lg-4 float-left">
+								<div class="dc-article">
+									<figure class="dc-articleimg">
+										<img src="front/images/articles/img-03.jpg" alt="img description">
+										<figcaption>
+											<div class="dc-articlesdocinfo">
+												<img src="front/images/articles/user/img-03.jpg" alt="img description">
+												<span>Lincoln Claggett</span>
+											</div>
+										</figcaption>
+									</figure>
+									<div class="dc-articlecontent">
+										<div class="dc-title">
+											<a href="javascript:void(0)" class="dc-articleby">Medical</a>
+											<h3><a href="javascript:void(0);">Always Keep Your First Aid Box Ready Near to You</a></h3>
+											<span class="dc-datetime"><i class="ti-calendar"></i> Jun 27, 2019</span>
+										</div>
+										<ul class="dc-moreoptions">
+											<li><a href="javascript:void(0);"><i class="ti-heart"></i> 12,032</a></li>
+											<li><a href="javascript:void(0);"><i class="ti-eye"></i> 1,26,558</a></li>
+											<li><a href="javascript:void(0);"><i class="ti-share"></i> Share</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- Latest Articles End -->
+		</main>
+		<!-- Main End -->
+	</div>
+	<script th:src="@{/front/js/vendor/jquery-3.3.1.js}"></script>
+	<script th:src="@{/front/js/project/search.js}"></script>
+</div>
+</body>
+</html>

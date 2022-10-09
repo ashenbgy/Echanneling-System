@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org"  lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+   <div th:replace="fragments/back/header.html :: headerTag"></div>
+   <body>
+      <div id="dc-wrapper" class="dc-wrapper dc-haslayout">
+          <div class="dc-contentwrapper">
+         <!-- Navbar -->
+         <div th:replace="fragments/back/navigation.html :: navbar"></div>
+         <!-- /.navbar -->
+         <div th:replace="fragments/back/sidebar.html :: sidebar"></div>
+         <!-- Content Wrapper. Contains page content -->
+
+         <div layout:fragment="content" id="content"></div>
+         <!-- /.content-wrapper -->
+        
+         
+         <!-- Main Footer -->
+       <!--  <div th:replace="fragments/back/footer.html :: footer"></div>-->
+      </div>
+      </div>
+      <!-- ./wrapper -->
+      <!-- REQUIRED SCRIPTS -->
+      <div th:replace="fragments/back/footerscript.html :: footerscript"></div>
+    
+   </body>
+</html>

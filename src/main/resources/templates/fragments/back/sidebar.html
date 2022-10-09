@@ -1,0 +1,85 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5" lang="en">
+<body>
+<div  th:fragment="sidebar">
+    <!--Sidebar Start--> 
+    <div id="dc-sidebarwrapper" class="dc-sidebarwrapper">
+        <div id="dc-btnmenutoggle" class="dc-btnmenutoggle">
+            <i class="ti-arrow-left"></i>
+        </div>
+        <div id="dc-verticalscrollbar" class="dc-verticalscrollbar">
+            <div class="dc-companysdetails dc-usersidebar">
+                <figure class="dc-companysimg">
+                    <img src="back/images/sidebar/img-01.jpg" alt="img description">
+                </figure>
+                <div class="dc-companysinfo">
+                    <figure><img src="back/images/sidebar/avatar.png" alt="img description"></figure>
+                    <div class="dc-title">
+                        <h2><span sec:authentication="name"> </span></h2>
+                        <span><i class="fa fa-clone"></i></span>
+                    </div>
+                </div>
+            </div>
+            <nav id="dc-navdashboard" class="dc-navdashboard">
+                <ul>
+                    <li>
+                        <a th:href = "@{/dashboard}">
+                            <i class="ti-dashboard"></i><span>DashBoard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a th:href = "@{/appointments}">
+                            <i class="ti-align-justify"></i><span>Appointments</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a th:href = "@{/doctors}">
+                            <i class="ti-user"></i><span>Doctor</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a th:href = "@{/patients}">
+                            <i class="ti-user"></i><span>Patient</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a th:href = "@{/centers}">
+                            <i class="ti-user"></i><span>Channel Center</span>
+                        </a>
+                    </li>
+                    <li>
+                       	<a th:href = "@{/registerCenter}">
+                           	<i class="ti-user"></i><span>Register Center</span>
+                       	</a>
+                   </li>
+                    <li>
+                        <a th:href = "@{/articles}">
+                            <i class="ti-bookmark"></i><span>Manage Articles</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a th:href = "@{/services}">
+                            <i class="ti-shopping-cart"></i><span>Manage Services</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a th:href = "@{/settings}">
+                            <i class="ti-settings"></i><span>Account Settings</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a th:href = "@{/logout}">
+                            <i class="ti-shift-right"></i><span>Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="dc-navdashboard-footer">
+                <span><a href="#"> E Channeling. </a>© 2022 All Rights Reserved.</span>
+            </div>
+        </div>
+    </div>
+    <!--Sidebar End-->
+</div>
+</body>
+</html>

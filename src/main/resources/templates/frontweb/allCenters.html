@@ -1,0 +1,163 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org" lang="en"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorate="~{fragments/front/main_layout}">
+<body class="dc-home">
+<div  layout:fragment="content">
+	<!--**********************************
+                Content body start
+            ***********************************-->
+	<div class="content-body">
+		<!-- Home Banner Start -->
+		<!--<div class="dc-innerbanner-holder dc-haslayout">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 col-sm-12 col-md-12 col-lg-12">
+						<div class="dc-innerbanner">
+							<form class="dc-formtheme dc-form-advancedsearch dc-innerbannerform">
+								<fieldset>
+									<div class="form-group">
+										<input type="text" name="search" class="form-control" placeholder="Search doctors, clinics, hospitals, etc.">
+									</div>
+									<div class="form-group">
+										<div class="dc-select">
+											<select class="chosen-select locations" data-placeholder="Country" name="locations">
+												<option value="Location">Location*</option>
+												<option value="United State">United State</option>
+												<option value="Canada">Canada</option>
+												<option value="England">England</option>
+												<option value="Switzerland">Switzerland</option>
+												<option value="New Zealand">New Zealand</option>
+											</select>
+										</div>
+									</div>
+									<div class="dc-btnarea">
+										<a href="javascript:void(0);" class="dc-btn">Search</a>
+									</div>
+								</fieldset>
+							</form>
+							<a href="javascript:void(0);" class="dc-docsearch"><span class="dc-advanceicon"><i></i> <i></i> <i></i></span><span>Advanced <br>Search</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="dc-advancedsearch-holder">
+				<div class="container">
+					<div class="row">
+						<div class="col-12 col-sm-12 col-md-12 col-lg-12">
+							<div class="dc-advancedsearchs">
+								<form class="dc-formtheme dc-form-advancedsearchs">
+									<fieldset>
+										<div class="form-group">
+											<div class="dc-select">
+												<select>
+													<option value="Availability">Availability</option>
+													<option value="Availability">morning</option>
+													<option value="Availability">evening</option>
+													<option value="Availability">night</option>
+												</select>
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="dc-select">
+												<select>
+													<option value="Fee">Consultation Fee</option>
+													<option value="Fee">20 $</option>
+													<option value="Fee">22 $</option>
+													<option value="Fee">18 $</option>
+												</select>
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="dc-typeoptions">
+												<span>Type:</span>
+												<div class="dc-select">
+													<select>
+														<option value="Show">Show All</option>
+														<option value="Show">Neurosurgeon</option>
+														<option>Dermatologists</option>
+														<option>Gastroenterologists</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="form-group">
+											<span class="dc-checkbox">
+												<input id="dc-show" type="checkbox" name="show">
+												<label for="dc-show">Show Nearest Only</label>
+											</span>
+										</div>
+										<div class="dc-btnarea">
+											<a href="javascript:void(0);" class="dc-btn dc-resetbtn">Reset Filters</a>
+										</div>
+									</fieldset>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>-->
+		<!-- Home Banner End -->
+		<!-- breadcrumbarea start -->
+		<div class="dc-breadcrumbarea">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<ol class="dc-breadcrumb">
+							<li><a href="index.html">Home</a></li>
+							<li>Channel Centers</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- breadcrumbarea End -->
+		<!--Main Start-->
+		<main id="dc-main" class="dc-main dc-haslayout dc-innerbgcolor">
+			<div class="dc-haslayout dc-main-section">
+				<!-- User Listing Start-->
+				<div class="container">
+					<div class="row">
+						<div id="dc-twocolumns" class="dc-twocolumns dc-haslayout">
+							<div class="col-xs-12 col-sm-12 col-md-9 col-lg-10 col-xl-11 float-left">
+								<div class="dc-searchresult-holder">
+									<!--<div class="dc-searchresult-head">
+                                        <div class="dc-title"><h4>1560 matches found for:<strong> Dentist In Manchester</strong></h4></div>
+                                        <div class="dc-rightarea">
+                                            <div class="dc-select">
+                                                <select>
+                                                    <option value="Sort By:">Sort By:</option>
+                                                </select>
+                                            </div>
+                                            <div class="dc-gridlist-option">
+                                                <a href="javascript:void(0);" class="dc-linkactive"><i class="ti-layout-grid2"></i></a>
+                                                <a href="javascript:void(0);"><i class="ti-view-list"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>-->
+									<div class="dc-searchresult-grid">
+										<div class="row" id="docPost">
+
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</main>
+
+
+	</div>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+	<script th:src="@{/front/js/project/centerFront.js}"></script>
+</div>
+
+
+
+</body>
+</html>

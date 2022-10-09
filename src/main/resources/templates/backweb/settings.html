@@ -1,0 +1,313 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org" lang="en"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{fragments/back/main_layout}">
+<body class="dc-userlogin">
+<div  layout:fragment="content">
+    <div class="content-body">
+        <main id="dc-main" class="dc-main dc-haslayout">
+            <section class="dc-haslayout">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <div class="dc-haslayout dc-dbsectionspace">
+                            <div class="dc-dashboardbox dc-dashboardtabsholder">
+                                <div class="dc-dashboardboxtitle">
+                                    <h2>Profile Settings</h2>
+                                </div>
+                                <div class="dc-dashboardtabs">
+                                    <ul class="dc-tabstitle nav navbar-nav">
+                                        <li class="nav-item">
+                                            <a class="active" data-toggle="tab" href="#dc-skills">Personal Details</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="dc-tabscontent tab-content">
+                                    <div class="dc-personalskillshold tab-pane active fade show" id="dc-skills">
+                                        <div class="dc-yourdetails dc-tabsinfo">
+                                            <div class="dc-tabscontenttitle">
+                                                <h3>Your Details</h3>
+                                            </div>
+                                            <form class="dc-formtheme dc-userform">
+                                                <fieldset>
+                                                    <div class="form-group form-group-half form-select-half">
+															<span class="dc-select">
+																<select>
+																	<option value="" disabled="">Select Gender</option>
+																	<option value="">Male</option>
+																	<option value="">Female</option>
+																</select>
+															</span>
+                                                        <span class="dc-select">
+																<select>
+																	<option value="">Dr./Prof. etc..</option>
+																	<option value="">Rachel Wong</option>
+																	<option value="">William</option>
+																</select>
+															</span>
+                                                    </div>
+                                                    <div class="form-group form-group-half">
+                                                        <input type="text" name="heading" class="form-control" placeholder="Sub Heading (Optional)">
+                                                    </div>
+                                                    <div class="form-group form-group-half">
+                                                        <input type="text" name="first name" class="form-control" placeholder="First Name">
+                                                    </div>
+                                                    <div class="form-group form-group-half">
+                                                        <input type="email" name="last name" class="form-control" placeholder="Last Name">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="text" name="short msg" class="form-control" placeholder="Short Description">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <textarea name="message" class="form-control" placeholder="Full Description"></textarea>
+                                                    </div>
+                                                </fieldset>
+                                            </form>
+                                        </div>
+                                        <div class="dc-skills dc-tabsinfo">
+                                            <div class="dc-tabscontenttitle">
+                                                <h3>Specializations</h3>
+                                            </div>
+                                            <div class="dc-skillscontent-holder">
+                                                <form class="dc-formtheme dc-skillsform">
+                                                    <fieldset>
+                                                        <div class="form-group">
+                                                            <div class="form-group-holder">
+                                                                <input type="text" name="rate" class="form-control" placeholder="Select Your Specializations">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group dc-btnarea">
+                                                            <a href="javascript:void(0);" class="dc-btn">Add Now</a>
+                                                        </div>
+                                                    </fieldset>
+                                                </form>
+                                                <div class="dc-myskills">
+                                                    <ul class="sortable list">
+                                                        <li>
+                                                            <div class="dc-dragdroptool">
+                                                                <a href="javascript:void(0)" class="lnr lnr-menu"></a>
+                                                            </div>
+                                                            <span class="skill-dynamic-html"><em class="skill-val">Dentist</em></span>
+                                                            <span class="skill-dynamic-field">
+																	<input type="text" name="skills[1][percentage]" value="Dentist">
+																</span>
+                                                            <div class="dc-rightarea">
+                                                                <a href="javascript:void(0);" class="dc-addinfo"><i class="lnr lnr-pencil"></i></a>
+                                                                <a href="javascript:void(0);" class="dc-deleteinfo"><i class="lnr lnr-trash"></i></a>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="dc-dragdroptool"><a href="javascript:void(0)" class="lnr lnr-menu"></a></div>
+                                                            <span class="skill-dynamic-html"><em class="skill-val">Dental Surgeon</em></span>
+                                                            <span class="skill-dynamic-field">
+																	<input type="text" name="skills[1][percentage]" value="Surgeon">
+																</span>
+                                                            <div class="dc-rightarea">
+                                                                <a href="javascript:void(0);" class="dc-addinfo"><i class="lnr lnr-pencil"></i></a>
+                                                                <a href="javascript:void(0);" class="dc-deleteinfo"><i class="lnr lnr-trash"></i></a>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="dc-dragdroptool handle"><a href="javascript:void(0)" class="lnr lnr-menu"></a></div>
+                                                            <span class="skill-dynamic-html"><em class="skill-val">Endodontist</em></span>
+                                                            <span class="skill-dynamic-field">
+																	<input type="text" name="skills[1][percentage]" value="Endodontist">
+																</span>
+                                                            <div class="dc-rightarea">
+                                                                <a href="javascript:void(0);" class="dc-addinfo"><i class="lnr lnr-pencil"></i></a>
+                                                                <a href="javascript:void(0);" class="dc-deleteinfo"><i class="lnr lnr-trash"></i></a>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="dc-dragdroptool handle"><a href="javascript:void(0)" class="lnr lnr-menu"></a></div>
+                                                            <span class="skill-dynamic-html"><em class="skill-val">Periodontist</em></span>
+                                                            <span class="skill-dynamic-field">
+																	<input type="text" name="skills[1][percentage]" value="Periodontist">
+																</span>
+                                                            <div class="dc-rightarea">
+                                                                <a href="javascript:void(0);" class="dc-addinfo"><i class="lnr lnr-pencil"></i></a>
+                                                                <a href="javascript:void(0);" class="dc-deleteinfo"><i class="lnr lnr-trash"></i></a>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="dc-dragdroptool handle"><a href="javascript:void(0)" class="lnr lnr-menu"></a></div>
+                                                            <span class="skill-dynamic-html"><em class="skill-val">Specialization</em></span>
+                                                            <span class="skill-dynamic-field">
+																	<input type="text" name="skills[1][percentage]" value="Specialization">
+																</span>
+                                                            <div class="dc-rightarea">
+                                                                <a href="javascript:void(0);" class="dc-addinfo"><i class="lnr lnr-pencil"></i></a>
+                                                                <a href="javascript:void(0);" class="dc-deleteinfo"><i class="lnr lnr-trash"></i></a>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="dc-dragdroptool handle"><a href="javascript:void(0)" class="lnr lnr-menu"></a></div>
+                                                            <span class="skill-dynamic-html"><em class="skill-val">Cosmetic/Aesthetic Dentist</em></span>
+                                                            <span class="skill-dynamic-field">
+																	<input type="text" name="skills[1][percentage]" value="Cosmetic/Aesthetic Dentist">
+																</span>
+                                                            <div class="dc-rightarea">
+                                                                <a href="javascript:void(0);" class="dc-addinfo"><i class="lnr lnr-pencil"></i></a>
+                                                                <a href="javascript:void(0);" class="dc-deleteinfo"><i class="lnr lnr-trash"></i></a>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="dc-dragdroptool handle"><a href="javascript:void(0)" class="lnr lnr-menu"></a></div>
+                                                            <span class="skill-dynamic-html"><em class="skill-val">Orthodontist</em></span>
+                                                            <span class="skill-dynamic-field">
+																	<input type="text" name="skills[1][percentage]" value="Orthodontist">
+																</span>
+                                                            <div class="dc-rightarea">
+                                                                <a href="javascript:void(0);" class="dc-addinfo"><i class="lnr lnr-pencil"></i></a>
+                                                                <a href="javascript:void(0);" class="dc-deleteinfo"><i class="lnr lnr-trash"></i></a>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="dc-dragdroptool handle"><a href="javascript:void(0)" class="lnr lnr-menu"></a></div>
+                                                            <span class="skill-dynamic-html"><em class="skill-val">Implantologist</em></span>
+                                                            <span class="skill-dynamic-field">
+																	<input type="text" name="skills[1][percentage]" value="Implantologist">
+																</span>
+                                                            <div class="dc-rightarea">
+                                                                <a href="javascript:void(0);" class="dc-addinfo"><i class="lnr lnr-pencil"></i></a>
+                                                                <a href="javascript:void(0);" class="dc-deleteinfo"><i class="lnr lnr-trash"></i></a>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="dc-dragdroptool handle"><a href="javascript:void(0)" class="lnr lnr-menu"></a></div>
+                                                            <span class="skill-dynamic-html"><em class="skill-val">Preventive Dentistry</em></span>
+                                                            <span class="skill-dynamic-field">
+																	<input type="text" name="skills[1][percentage]" value="Dentistry">
+																</span>
+                                                            <div class="dc-rightarea">
+                                                                <a href="javascript:void(0);" class="dc-addinfo"><i class="lnr lnr-pencil"></i></a>
+                                                                <a href="javascript:void(0);" class="dc-deleteinfo"><i class="lnr lnr-trash"></i></a>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="dc-dragdroptool handle"><a href="javascript:void(0)" class="lnr lnr-menu"></a></div>
+                                                            <span class="skill-dynamic-html"><em class="skill-val">Primary Care Dentist</em></span>
+                                                            <span class="skill-dynamic-field">
+																	<input type="text" name="skills[1][percentage]" value="Dentist">
+																</span>
+                                                            <div class="dc-rightarea">
+                                                                <a href="javascript:void(0);" class="dc-addinfo"><i class="lnr lnr-pencil"></i></a>
+                                                                <a href="javascript:void(0);" class="dc-deleteinfo"><i class="lnr lnr-trash"></i></a>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="dc-dragdroptool handle"><a href="javascript:void(0)" class="lnr lnr-menu"></a></div>
+                                                            <span class="skill-dynamic-html"><em class="skill-val">Dental Surgeon</em></span>
+                                                            <span class="skill-dynamic-field">
+																	<input type="text" name="skills[1][percentage]" value="Surgeon">
+																</span>
+                                                            <div class="dc-rightarea">
+                                                                <a href="javascript:void(0);" class="dc-addinfo"><i class="lnr lnr-pencil"></i></a>
+                                                                <a href="javascript:void(0);" class="dc-deleteinfo"><i class="lnr lnr-trash"></i></a>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="dc-skills dc-tabsinfo dc-tabsinfo-test">
+                                            <div class="dc-tabscontenttitle">
+                                                <h3>Memberships</h3>
+                                            </div>
+                                            <div class="dc-skillscontent-holder">
+                                                <form class="dc-formtheme dc-skillsform">
+                                                    <fieldset>
+                                                        <div class="form-group">
+                                                            <div class="form-group-holder">
+                                                                <input type="text" name="rate" class="form-control" placeholder="Select Your Memberships">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group dc-btnarea">
+                                                            <a href="javascript:void(0);" class="dc-btn">Add Now</a>
+                                                        </div>
+                                                    </fieldset>
+                                                </form>
+                                                <div class="dc-myskills">
+                                                    <ul class="sortable list">
+                                                        <li>
+                                                            <div class="dc-dragdroptool">
+                                                                <a href="javascript:void(0)" class="lnr lnr-menu"></a>
+                                                            </div>
+                                                            <span class="skill-dynamic-html"><em class="skill-val">Manchester Academy of Oral Medicine and Radiology</em></span>
+                                                            <span class="skill-dynamic-field">
+																	<input type="text" name="skills[1][percentage]" value="Manchester Academy of Oral Medicine and Radiology">
+																</span>
+                                                            <div class="dc-rightarea">
+                                                                <a href="javascript:void(0);" class="dc-addinfo"><i class="lnr lnr-pencil"></i></a>
+                                                                <a href="javascript:void(0);" class="dc-deleteinfo"><i class="lnr lnr-trash"></i></a>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="dc-dragdroptool"><a href="javascript:void(0)" class="lnr lnr-menu"></a></div>
+                                                            <span class="skill-dynamic-html"><em class="skill-val">United State Dental Council</em></span>
+                                                            <span class="skill-dynamic-field">
+																	<input type="text" name="skills[1][percentage]" value="United State Dental Council">
+																</span>
+                                                            <div class="dc-rightarea">
+                                                                <a href="javascript:void(0);" class="dc-addinfo"><i class="lnr lnr-pencil"></i></a>
+                                                                <a href="javascript:void(0);" class="dc-deleteinfo"><i class="lnr lnr-trash"></i></a>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="dc-dragdroptool handle"><a href="javascript:void(0)" class="lnr lnr-menu"></a></div>
+                                                            <span class="skill-dynamic-html"><em class="skill-val">International Association of General Dentistry (IAGD)</em></span>
+                                                            <span class="skill-dynamic-field">
+																	<input type="text" name="skills[1][percentage]" value="International Association of General Dentistry (IAGD)">
+																</span>
+                                                            <div class="dc-rightarea">
+                                                                <a href="javascript:void(0);" class="dc-addinfo"><i class="lnr lnr-pencil"></i></a>
+                                                                <a href="javascript:void(0);" class="dc-deleteinfo"><i class="lnr lnr-trash"></i></a>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="dc-dragdroptool handle"><a href="javascript:void(0)" class="lnr lnr-menu"></a></div>
+                                                            <span class="skill-dynamic-html"><em class="skill-val">International Federation of Dental Educators and Associations (IFDEA, USA)</em></span>
+                                                            <span class="skill-dynamic-field">
+																	<input type="text" name="skills[1][percentage]" value="International Federation of Dental Educators and Associations (IFDEA, USA)">
+																</span>
+                                                            <div class="dc-rightarea">
+                                                                <a href="javascript:void(0);" class="dc-addinfo"><i class="lnr lnr-pencil"></i></a>
+                                                                <a href="javascript:void(0);" class="dc-deleteinfo"><i class="lnr lnr-trash"></i></a>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="dc-dragdroptool handle"><a href="javascript:void(0)" class="lnr lnr-menu"></a></div>
+                                                            <span class="skill-dynamic-html"><em class="skill-val">Sydney Academy of Aesthetic &amp; Cosmetic Dentistry</em></span>
+                                                            <span class="skill-dynamic-field">
+																	<input type="text" name="skills[1][percentage]" value="Sydney Academy of Aesthetic &amp; Cosmetic Dentistry">
+																</span>
+                                                            <div class="dc-rightarea">
+                                                                <a href="javascript:void(0);" class="dc-addinfo"><i class="lnr lnr-pencil"></i></a>
+                                                                <a href="javascript:void(0);" class="dc-deleteinfo"><i class="lnr lnr-trash"></i></a>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dc-updatall">
+                                <i class="ti-announcement"></i>
+                                <span>Update all the latest changes made by you, by just clicking on “Save &amp; Continue” button.</span>
+                                <a class="dc-btn" href="javascript:void(0);">Save &amp; Update</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+
+    </div>
+    <!--<script th:src="@{/js/project/jquery.min.js}"></script>
+    <script th:src="@{/js/project/hotel.js}"></script>-->
+</div>
+</body>
+</html>

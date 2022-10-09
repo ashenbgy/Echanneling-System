@@ -1,0 +1,102 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org" lang="en"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{fragments/back/main_layout}">
+<body class="dc-userlogin">
+<div  layout:fragment="content">
+    <div class="content-body">
+        <main id="dc-main" class="dc-main dc-haslayout">
+            <section class="dc-haslayout">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <div class="dc-haslayout dc-dbsectionspace dc-dbsectionspacetest">
+                            <div class="dc-dashboardbox">
+                                <div class="dc-dashboardboxtitle">
+                                    <h2>Appointments</h2>
+                                </div>
+                                <div class="dc-dashboardboxcontent dc-clinicloc-holder">
+                                    <div class="dc-tabscontenttitle">
+                                        <h3>Appointments 1</h3>
+                                    </div>
+                                    <div class="dc-content-holder">
+                                    <!-- <div th:if="${ not#lists.isEmpty(doctor)}"> -->
+										<table class="table table-striped" id ="appTable1">
+										  <thead class="thead-dark">
+										    <tr>
+                                                <th class="hide_me"></th>
+										      	<th>Date</th>
+										        <th>Start Time</th>
+										        <th>End Time</th>
+										        <th>Options</th>
+										   	</tr>
+										  </thead>
+										  <tbody id="appTbody1">
+										   
+										  </tbody>
+										</table>
+										<!-- </div> -->
+                                    </div>
+                                </div>
+                                
+                                <div class="dc-dashboardboxcontent dc-clinicloc-holder">
+                                    <div class="dc-tabscontenttitle">
+                                        <h3>Appointments 2</h3>
+                                    </div>
+                                    <div class="dc-content-holder">
+                                    <!-- <div th:if="${ not#lists.isEmpty(doctor)}"> -->
+										<table class="table table-striped" id ="appTable2">
+										  <thead class="thead-dark">
+										    <tr>
+                                                <th class="hide_me"></th>
+										      	<th>Date</th>
+										        <th>Start Time</th>
+										        <th>End Time</th>
+										        <th>Options</th>
+										   	</tr>
+										  </thead>
+										  <tbody id="appTbody2">
+										   
+										  </tbody>
+										</table>
+										<!-- </div> -->
+                                    </div>
+                                </div>
+                                
+                                <div class="dc-dashboardboxcontent dc-clinicloc-holder">
+                                    <div class="dc-tabscontenttitle">
+                                        <h3>Appointments 3</h3>
+                                    </div>
+                                    <div class="dc-content-holder">
+                                    <!-- <div th:if="${ not#lists.isEmpty(doctor)}"> -->
+										<table class="table table-striped" id ="appTable3">
+										  <thead class="thead-dark">
+										    <tr>
+                                                <th class="hide_me"></th>
+										      	<th>Date</th>
+										        <th>Start Time</th>
+										        <th>End Time</th>
+										        <th>Options</th>
+										   	</tr>
+										  </thead>
+										  <tbody id="appTbody1">
+										   
+										  </tbody>
+										</table>
+										<!-- </div> -->
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+
+        </main>
+    </div>
+    <script th:src="@{/back/js/vendor/jquery-3.3.1.js}"></script>
+    <script th:src="@{/back/js/project/allappointment.js}"></script>
+</div>
+</body>
+</html>

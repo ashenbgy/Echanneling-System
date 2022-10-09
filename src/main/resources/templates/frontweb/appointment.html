@@ -1,0 +1,206 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org" lang="en"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{fragments/front/main_layout}">
+<body class="dc-home">
+	<div layout:fragment="content">
+		<!--**********************************
+                Content body start
+            ***********************************-->
+		<div class="content-body">
+			<!-- Home Banner Start -->
+			<div class="dc-innerbanner-holder dc-haslayout">
+				<div class="container">
+					<div class="row">
+						<div class="col-12 col-sm-12 col-md-12 col-lg-12">
+							<div class="dc-innerbanner">
+								<form
+									class="dc-formtheme dc-form-advancedsearch dc-innerbannerform">
+									<fieldset>
+										<div class="form-group">
+											<input type="text" name="search" class="form-control"
+												placeholder="Search doctors, clinics, hospitals, etc.">
+										</div>
+										<div class="form-group">
+											<div class="dc-select">
+												<select class="chosen-select locations"
+													data-placeholder="Country" name="locations">
+													<option value="Location">Location*</option>
+													<option value="United State">United State</option>
+													<option value="Canada">Canada</option>
+													<option value="England">England</option>
+													<option value="Switzerland">Switzerland</option>
+													<option value="New Zealand">New Zealand</option>
+												</select>
+											</div>
+										</div>
+										<div class="dc-btnarea">
+											<a href="javascript:void(0);" class="dc-btn">Search</a>
+										</div>
+									</fieldset>
+								</form>
+								<a href="javascript:void(0);" class="dc-docsearch"><span
+									class="dc-advanceicon"><i></i> <i></i> <i></i></span><span>Advanced
+										<br>Search
+								</span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="dc-advancedsearch-holder">
+					<div class="container">
+						<div class="row">
+							<div class="col-12 col-sm-12 col-md-12 col-lg-12">
+								<div class="dc-advancedsearchs">
+									<form class="dc-formtheme dc-form-advancedsearchs">
+										<fieldset>
+											<div class="form-group">
+												<div class="dc-select">
+													<select>
+														<option value="Availability">Availability</option>
+														<option value="Availability">morning</option>
+														<option value="Availability">evening</option>
+														<option value="Availability">night</option>
+													</select>
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="dc-select">
+													<select>
+														<option value="Fee">Consultation Fee</option>
+														<option value="Fee">20 $</option>
+														<option value="Fee">22 $</option>
+														<option value="Fee">18 $</option>
+													</select>
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="dc-typeoptions">
+													<span>Type:</span>
+													<div class="dc-select">
+														<select>
+															<option value="Show">Show All</option>
+															<option value="Show">Neurosurgeon</option>
+															<option>Dermatologists</option>
+															<option>Gastroenterologists</option>
+														</select>
+													</div>
+												</div>
+											</div>
+											<div class="form-group">
+												<span class="dc-checkbox"> <input id="dc-show"
+													type="checkbox" name="show"> <label for="dc-show">Show
+														Nearest Only</label>
+												</span>
+											</div>
+											<div class="dc-btnarea">
+												<a href="javascript:void(0);" class="dc-btn dc-resetbtn">Reset
+													Filters</a>
+											</div>
+										</fieldset>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Home Banner End -->
+			<!-- breadcrumbarea start -->
+			<div class="dc-breadcrumbarea">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<ol class="dc-breadcrumb">
+								<li><a href="index.html">Home</a></li>
+								<li>Create Appointment</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- breadcrumbarea End -->
+			<!--Main Start-->
+			<main id="dc-main" class="dc-main dc-haslayout dc-innerbgcolor">
+				
+			<!--Create Appointment Form Start-->
+			<div class="dc-haslayout dc-main-section">
+				<div class="container">
+					<div class="row justify-content-md-center">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 push-lg-2">
+							<div class="dc-registerformhold">
+								<div class="dc-registerformmain">
+								<div class="dc-registerhead">
+									<div class="dc-title">
+										<h3>Create Appointment</h3>
+									</div>
+									</div>
+
+									<div class="form-group">
+										<div class="dc-select">
+											<select class="chosen-select">
+												<option value="Show">Select Type</option>
+												<option value="Show">Neurosurgeon</option>
+												<option value="Show">Dermatologists</option>
+												<option value="Show">Gastroenterologists</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="dc-select">
+											<select class="chosen-select">
+												<option value="Show">Select Specialist</option>
+												<option value="Show">Dr. Chandima</option>
+												<option value="Show">Dr. Rajitha</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="dc-select">
+											<select class="chosen-select locations"
+												data-placeholder="Channel Centers" name="locations">
+												<option value="Location">Channel Center*</option>
+												<option value="Colombo">Colombo</option>
+												<option value="Anuradhapura">Anuradhapura</option>
+												<option value="Gampaha">Gampaha</option>
+												<option value="Ragama">Ragama</option>
+												<option value="Kurunegala">Kurunegala</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group form-group-half">
+										<div class="dc-select">
+											<select class="chosen-select">
+												<option value="Show">Select Time</option>
+												<option value="Show">8.30am - 9.00am</option>
+												<option value="Show">9.30am - 10.00am</option>
+												<option value="Show">1.30am - 2.00am</option>
+												<option value="Show">4.30am - 5.00am</option>
+											</select>
+										</div>
+									</div>
+									
+									<div class="form-group form-group-half">
+										<input type="date" id="date" name="date" class="form-control" placeholder="Date">
+									</div>
+									<div class="form-group">
+										<button type="button" class="dc-btn" onclick="#"> Create</button>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			</main>
+
+
+		</div>
+
+		<!--<script th:src="@{/front/js/vendor/jquery-3.3.1.js}"></script>-->
+		<script th:src="@{/front/js/project/user.js}"></script>
+	</div>
+</body>
+</html>
