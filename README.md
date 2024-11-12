@@ -7,6 +7,6 @@ E-Channeling in Spring Boot refers to a healthcare appointment management system
 3. Doctor and Channel Center Profiles: Patients can view detailed information about healthcare providers, including specialties, qualifications, consultation times, and Channel Center locations.
 4. Database Management: Using Spring Data JPA or Hibernate, the system maintains persistent data such as user profiles, appointment details, and medical records in a database, enabling efficient data retrieval and storage.
 5. RESTful APIs: For ease of integration with other systems (e.g., hospital management systems or third-party apps), the application exposes its functionalities via RESTful APIs, allowing developers to expand or integrate it with other services.
-6. Logging and Monitoring: With Spring Boot's Actuator and logging frameworks, the system can log events and monitor performance, helping administrators ensure uptime and troubleshoot issues.
+6. Logging and Monitoring: With logging frameworks, helping administrators ensure uptime and troubleshoot issues.
 
 This Spring Boot-based solution provides a robust, scalable foundation for healthcare providers to streamline appointment management and improve patient satisfaction.
